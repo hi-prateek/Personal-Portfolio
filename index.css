@@ -99,6 +99,7 @@ nav{
   
     .nav__toggle{
       display: none;
+      font-weight: 600;
     }
 
     .__dark-mode{
@@ -151,11 +152,13 @@ nav{
 
     .nav__link{
         transition: .3s;
+        font-weight: 600;
     }
 
     .nav__toggle{
         display: block;
         font-size: 1.3rem;
+        font-weight: 600;
         cursor: pointer;
         color: var(--main-color);
     }
@@ -265,7 +268,7 @@ button{
 
     .person .__BG{
         width: 290px;
-        height: 320px
+        height: 320px;
     }
 
     .person .__BG img{

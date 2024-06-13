@@ -1,89 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ============ BOX-ICONS ============ -->
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- ======a===== CSS ============= -->
-    <link rel="stylesheet" href="./index.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============ BOX-ICONS ============ -->
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <!-- ======a===== CSS ============= -->
+  <link rel="stylesheet" href="./style.css" />
+  <title>Prateek Pandey - Portfolio</title>
+</head>
+<body>
+  <!-- ========= HEADER ==========  -->
+  <header class="l-header" id="header">
+    <nav class="nav bd-container">
+      <a href="#" class="nav__logo">Prateek</a>
 
-<!--     <title>Personal Portfolio</title> -->
-  </head>
-  <body>
-    <!-- ========= HEADER ==========  -->
-    <header class="l-header" id="header">
-      <nav class="nav bd-container">
-        <a href="#" class="nav__logo">Prateek</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#work" class="nav__link">Work</a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">Services</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
-          </ul>
-
-          <div class="__dark-mode">
-            <i class='bx bx-moon bx-sun' id="theme-button"></i>
-          </div>
-
-        </div>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-grid-alt"></i>
-        </div>
-      </nav>
-    </header>
-
-    <!-- ========= SECTION ======== -->
-
-    <main class="container">
-      <div class="content">
-        <div class="text">
-          <h1>
-            Hey, I'm a <br />
-             <span>MERN </span> Stack<br />
-            developer
-          </h1>
-          <p>
-            Hi, I'm Prateek, a Full Stack Web Developer from India<br />
-            Currently, pursuing Bachelors in Technology in Electrical 
-            Engineering and has good experience working on several 
-            projects and websites. 
-            Always open to new challenges and meet new people.
-          </p>
-          <div class="field">
-              <label>
-                  <input type="text" placeholder="Email Address">
-                  <button>Subscribe</button>
-              </label>
-          </div>
-          <p></p>
-        </div>
-        <div class="person">
-            <div class="__BG">
-                <img src= "images/test pic.jpg"  >
-                
-            </div>
+        <div class="__dark-mode">
+          <i class='bx bx-moon bx-sun' id="theme-button"></i>
         </div>
       </div>
-    </main>
 
-    <!-- ============ JAVASCRIPT ===========  -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-grid-alt"></i>
+      </div>
+    </nav>
+  </header>
 
-    <script src="index.js"></script>
-  </body>
+  <!-- ========= SECTION ======== -->
+
+  <main class="container">
+    <section id="about" class="content">
+      <div class="text">
+        <h1>
+          Hey, I'm a <br />
+          <span>MERN</span> Stack<br />
+          Developer
+        </h1>
+        <p>
+          Hi, I'm Prateek, a Full Stack Web Developer from India with a degree in Electrical Engineering.
+          I have extensive experience in developing and maintaining automation systems and web applications.
+          Currently, I'm working at Everest Group, where I have successfully delivered several high-quality software products.
+        </p>
+        <div class="field">
+          <label>
+            <input type="text" placeholder="Email Address">
+            <button>Subscribe</button>
+          </label>
+        </div>
+        <p></p>
+      </div>
+      <div class="person">
+        <div class="__BG">
+          <img src="images/profile.jpg" alt="Prateek Pandey">
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="content">
+      <h2>Work Experience</h2>
+      <div class="work-experience">
+        <h3>Software Developer Engineer at Everest Group</h3>
+        <p>Gurugram, Haryana (02/2023 - Present)</p>
+        <ul>
+          <li>Developed and maintained various automation systems and custom web applications.</li>
+          <li>Managed end-to-end project lifecycle, collaborating with stakeholders to gather requirements, design solutions, and deliver high-quality software products.</li>
+          <li>Integrated multiple third-party APIs and provided technical support and training to team members.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="content">
+      <h2>Projects</h2>
+      <div class="projects">
+        <h3>iDoc (01/2024 - 04/2024)</h3>
+        <ul>
+          <li>Developed a web app for seamless customization of Word and PowerPoint templates.</li>
+          <li>Supported secure upload of DOCX and PPTX files for customization.</li>
+          <li>Enabled one-click processing and downloading of multiple customized documents.</li>
+          <li>Provided an intuitive interface for uploading files, entering data, and downloading results.</li>
+        </ul>
+        <h3>Attendance Automation System (10/2023 - 12/2023)</h3>
+        <ul>
+          <li>Developed an automation system for managing and reporting employee attendance using Microsoft Graph API and Azure services.</li>
+          <li>Automated email reports and integrated data from Azure AD and SQL Server.</li>
+        </ul>
+        <h3>Excel Automations Project (09/2023 - 10/2023)</h3>
+        <ul>
+          <li>Automated financial analysis and email notification systems for vendor contract renewals and employee anniversaries.</li>
+        </ul>
+        <h3>Zoho Call Transcripts Automation System (08/2023 - 09/2023)</h3>
+        <ul>
+          <li>Developed an automation system for fetching, processing, and updating call transcripts from Zoho Creator.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="content">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:work.prateekpandey@gmail.com">work.prateekpandey@gmail.com</a></p>
+      <p>Phone: +91 7355539443</p>
+      <p>Location: Prayagraj, (U.P)</p>
+      <p>
+        <a href="https://www.linkedin.com/in/prateek2575/">LinkedIn</a> |
+        <a href="https://github.com/prateek2575">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- ============ JAVASCRIPT ===========  -->
+
+  <script src="script.js"></script>
+</body>
 </html>

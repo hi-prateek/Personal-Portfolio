@@ -1,102 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ============ BOX-ICONS ============ -->
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+    <!-- ====== CSS ============= -->
     <link rel="stylesheet" href="./style.css" />
     <title>Prateek Pandey | Portfolio</title>
-</head>
-<body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Prateek Pandey</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-                <div class="nav__dark-mode">
-                    <i class='bx bx-moon' id="theme-button"></i>
-                </div>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="bx bx-grid-alt"></i>
-            </div>
-        </nav>
+  </head>
+  <body>
+    <!-- ========= HEADER ==========  -->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">Prateek Pandey</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+          <div class="__dark-mode">
+            <i class='bx bx-moon bx-sun' id="theme-button"></i>
+          </div>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </nav>
     </header>
 
-    <main class="main">
-        <section class="hero">
-            <div class="hero__content container">
-                <h1>
-                    Hello, I'm Prateek<br />
-                    <span>Software Developer Engineer</span>
-                </h1>
-                <p>
-                    Hi, I'm Prateek, a Software Developer Engineer from India. Currently working at Everest Group with a strong background in developing and maintaining automation systems and custom web applications. I have extensive experience in managing projects from conception to completion.
-                </p>
-            </div>
-        </section>
+    <!-- ========= SECTION ======== -->
 
-        <section id="about" class="about section">
-            <div class="container">
-                <h2 class="section__title">About Me</h2>
-                <p>
-                    I am passionate about solving problems through technology and have honed my skills in Python, HTML, CSS, SQL, and JavaScript. I have worked on a variety of projects involving automation, web development, and data processing.
-                </p>
-            </div>
-        </section>
+    <main class="container">
+      <div class="content">
+        <div class="text">
+          <h1>
+            Hey, I'm a <br />
+            <span>Software Developer Engineer</span>
+          </h1>
+          <p>
+            Hi, I'm Prateek, a Software Developer Engineer from India.<br />
+            Currently working at Everest Group with a strong background in developing and maintaining automation systems and custom web applications. I have extensive experience in managing projects from conception to completion.
+          </p>
+          <div class="field">
+            <label>
+              <input type="text" placeholder="Email Address">
+              <button>Subscribe</button>
+            </label>
+          </div>
+          <p></p>
+        </div>
+        <div class="person">
+          <div class="__BG">
+            <img src="avatar.png" alt="Prateek Pandey">
+          </div>
+        </div>
+      </div>
 
-        <section id="work" class="work section">
-            <div class="container">
-                <h2 class="section__title">Work Experience</h2>
-                <h3>Software Developer Engineer, Everest Group</h3>
-                <p>February 2023 - Present</p>
-                <ul>
-                    <li>Developed and maintained various automation systems and custom web applications, improving efficiency by 30%.</li>
-                    <li>Managed end-to-end project lifecycle, ensuring successful project delivery.</li>
-                    <li>Integrated multiple third-party APIs and provided technical support and training to team members.</li>
-                </ul>
-            </div>
-        </section>
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am passionate about solving problems through technology and have honed my skills in Python, HTML, CSS, SQL, and JavaScript. I have worked on a variety of projects involving automation, web development, and data processing.
+        </p>
+      </section>
 
-        <section id="projects" class="projects section">
-            <div class="container">
-                <h2 class="section__title">Projects</h2>
-                <h3>iDoc</h3>
-                <p>January 2024 - April 2024</p>
-                <ul>
-                    <li>Developed a web app for customization of Word and PowerPoint templates using Excel data.</li>
-                    <li>Enabled batch processing and downloads for tailored documents.</li>
-                    <li>Provided a user-friendly interface for uploading files, entering data, and downloading results.</li>
-                </ul>
-                <h3>Attendance Automation System</h3>
-                <p>October 2023 - December 2023</p>
-                <ul>
-                    <li>Automated employee attendance management and reporting using Microsoft Graph API and Azure services.</li>
-                    <li>Sent detailed attendance reports in HTML format.</li>
-                </ul>
-            </div>
-        </section>
+      <!-- Work Section -->
+      <section id="work">
+        <h2>Work Experience</h2>
+        <h3>Software Developer Engineer, Everest Group</h3>
+        <p>February 2023 - Present</p>
+        <ul>
+          <li>Developed and maintained various automation systems and custom web applications, improving efficiency by 30%.</li>
+          <li>Managed end-to-end project lifecycle, ensuring successful project delivery.</li>
+          <li>Integrated multiple third-party APIs and provided technical support and training to team members.</li>
+        </ul>
+      </section>
 
-        <section id="contact" class="contact section">
-            <div class="container">
-                <h2 class="section__title">Contact Me</h2>
-                <p>Email: work.prateekpandey@gmail.com</p>
-                <p>Phone: +91 7355539443</p>
-                <p>Location: Prayagraj, Uttar Pradesh, India</p>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/prateek2575/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                    <li><a href="https://github.com/prateek2575" target="_blank"><i class='bx bxl-github'></i></a></li>
-                </ul>
-            </div>
-        </section>
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <h3>iDoc</h3>
+        <p>January 2024 - April 2024</p>
+        <ul>
+          <li>Developed a web app for customization of Word and PowerPoint templates using Excel data.</li>
+          <li>Enabled batch processing and downloads for tailored documents.</li>
+          <li>Provided a user-friendly interface for uploading files, entering data, and downloading results.</li>
+        </ul>
+        <h3>Attendance Automation System</h3>
+        <p>October 2023 - December 2023</p>
+        <ul>
+          <li>Automated employee attendance management and reporting using Microsoft Graph API and Azure services.</li>
+          <li>Sent detailed attendance reports in HTML format.</li>
+        </ul>
+        <!-- Add more projects as needed -->
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: work.prateekpandey@gmail.com</p>
+        <p>Phone: +91 7355539443</p>
+        <p>Location: Prayagraj, Uttar Pradesh, India</p>
+        <ul class="social-links">
+          <li><a href="https://www.linkedin.com/in/prateek2575/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/prateek2575" target="_blank">GitHub</a></li>
+        </ul>
+      </section>
     </main>
 
+    <!-- ============ JAVASCRIPT ===========  -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

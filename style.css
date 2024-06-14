@@ -26,6 +26,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
@@ -80,80 +81,94 @@ header {
     color: #fff;
 }
 
-.__dark-mode {
+.nav__dark-mode {
     cursor: pointer;
     margin-left: 1rem;
 }
 
-.__dark-mode i {
+.nav__dark-mode i {
     font-size: 1.5rem;
     color: #fff;
 }
 
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10rem 2rem 5rem;
-}
-
-.hero__content {
-    max-width: 600px;
+    padding: 10rem 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
 }
 
 .hero__content h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .hero__content span {
-    color: var(--secondary-color);
+    color: #ecf0f1;
 }
 
 .hero__content p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    color: var(--light-text-color);
 }
 
-.field {
+.section {
+    padding: 5rem 0;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.about, .work, .projects, .contact {
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+.about p, .work ul, .projects ul, .contact p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
     display: flex;
-    align-items: center;
-    border: 1px solid var(--primary-color);
-    border-radius: 25px;
-    overflow: hidden;
+    justify-content: center;
+    list-style-type: none;
 }
 
-.field input {
-    flex: 1;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
+.social-links li {
+    margin: 0 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+/* =========== FOOTER =========== */
+footer {
+    margin-top: 2rem;
+    text-align: center;
     font-size: 1rem;
+    color: var(--text-color);
 }
 
-.field button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.field button:hover {
-    background-color: var(--secondary-color);
-}
-
-.hero__image {
-    max-width: 400px;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero__
+@

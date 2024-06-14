@@ -4,20 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ============ BOX-ICONS ============ -->
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
-    <!-- ====== CSS ============= -->
     <link rel="stylesheet" href="./style.css" />
     <title>Prateek Pandey | Portfolio</title>
   </head>
   <body>
-    <!-- ========= HEADER ==========  -->
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <a href="#" class="nav__logo">Prateek Pandey</a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
             <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
             <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -32,87 +30,121 @@
       </nav>
     </header>
 
-    <!-- ========= SECTION ======== -->
-
     <main class="container">
-      <div class="content">
-        <div class="text">
-          <h1>
-            Hey, I'm a <br />
-            <span>Software Developer Engineer</span>
-          </h1>
-          <p>
-            Hi, I'm Prateek, a Software Developer Engineer from India.<br />
-            Currently working at Everest Group with a strong background in developing and maintaining automation systems and custom web applications. I have extensive experience in managing projects from conception to completion.
-          </p>
-          <div class="field">
-            <label>
-              <input type="text" placeholder="Email Address">
-              <button>Subscribe</button>
-            </label>
+      <section class="hero">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1>Hey, I'm <span>Prateek Pandey</span></h1>
+            <p>
+              A passionate <span>Software Developer Engineer</span> from India.
+            </p>
+            <p>
+              Currently working at Everest Group with a strong background in developing and maintaining automation systems and custom web applications.
+            </p>
+            <a href="#contact" class="button">Get in Touch</a>
           </div>
-          <p></p>
-        </div>
-        <div class="person">
-          <div class="__BG">
+          <div class="hero__image">
             <img src="avatar.png" alt="Prateek Pandey">
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- About Section -->
-      <section id="about">
+      <section id="about" class="about">
         <h2>About Me</h2>
         <p>
           I am passionate about solving problems through technology and have honed my skills in Python, HTML, CSS, SQL, and JavaScript. I have worked on a variety of projects involving automation, web development, and data processing.
         </p>
       </section>
 
-      <!-- Work Section -->
-      <section id="work">
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills__container">
+          <span class="skill__box">Python</span>
+          <span class="skill__box">Flask</span>
+          <span class="skill__box">Gen AI</span>
+          <span class="skill__box">GIT</span>
+          <span class="skill__box">XML</span>
+          <span class="skill__box">Java</span>
+          <span class="skill__box">HTML</span>
+          <span class="skill__box">CSS</span>
+          <span class="skill__box">C</span>
+          <span class="skill__box">SQL</span>
+          <span class="skill__box">JavaScript</span>
+          <span class="skill__box">Microsoft Graph API</span>
+        </div>
+      </section>
+
+      <section id="work" class="work">
         <h2>Work Experience</h2>
-        <h3>Software Developer Engineer, Everest Group</h3>
-        <p>February 2023 - Present</p>
-        <ul>
-          <li>Developed and maintained various automation systems and custom web applications, improving efficiency by 30%.</li>
-          <li>Managed end-to-end project lifecycle, ensuring successful project delivery.</li>
-          <li>Integrated multiple third-party APIs and provided technical support and training to team members.</li>
-        </ul>
+        <div class="work__experience">
+          <h3>Software Developer Engineer, Everest Group</h3>
+          <p>Gurugram, Haryana | February 2023 - Present</p>
+          <ul>
+            <li>Developed and maintained various automation systems and custom web applications, significantly reducing manual effort and errors, improving data processing efficiency by 30%, and enhancing user experience and operational efficiency.</li>
+            <li>Managed end-to-end project lifecycle as a single developer, collaborating with stakeholders to gather requirements, design solutions, and deliver high-quality software products, ensuring successful project delivery.</li>
+            <li>Integrated multiple third-party APIs and provided technical support and training to team members, extending functionality, streamlining workflows, and ensuring smooth adoption and utilization of developed tools.</li>
+          </ul>
+        </div>
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects">
+      <section id="projects" class="projects">
         <h2>Projects</h2>
-        <h3>iDoc</h3>
-        <p>January 2024 - April 2024</p>
-        <ul>
-          <li>Developed a web app for customization of Word and PowerPoint templates using Excel data.</li>
-          <li>Enabled batch processing and downloads for tailored documents.</li>
-          <li>Provided a user-friendly interface for uploading files, entering data, and downloading results.</li>
-        </ul>
-        <h3>Attendance Automation System</h3>
-        <p>October 2023 - December 2023</p>
-        <ul>
-          <li>Automated employee attendance management and reporting using Microsoft Graph API and Azure services.</li>
-          <li>Sent detailed attendance reports in HTML format.</li>
-        </ul>
-        <!-- Add more projects as needed -->
+        <div class="project">
+          <h3>iDoc</h3>
+          <p>January 2024 - April 2024</p>
+          <ul>
+            <li>Developed iDoc as a solo developer, a web app for seamless customization of Word and PowerPoint templates by directly modifying XML using Excel data or manual input, enabling one-click batch processing and downloads for tailored documents.</li>
+            <li>File Upload and Handling (Flask, Python): Supported secure upload of DOCX and PPTX files for customization.</li>
+            <li>Placeholder Extraction (lxml, python-pptx): Identified and displayed placeholders for user input.</li>
+            <li>Dynamic Content Replacement (lxml, python-pptx): Replaced placeholders with user-provided data by directly modifying XML.</li>
+            <li>Batch Processing (ZipFile, Python): Enabled one-click processing and downloading of multiple customized documents.</li>
+            <li>User-Friendly Interface (HTML, CSS, JavaScript, jQuery): Provided an intuitive interface for uploading files, entering data, and downloading results.</li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>Attendance Automation System</h3>
+          <p>October 2023 - December 2023</p>
+          <ul>
+            <li>Developed an automation system for managing and reporting employee attendance using Microsoft Graph API and Azure services.</li>
+            <li>Automated Email Reports (Python, HTML): Sent detailed attendance reports in HTML format.</li>
+            <li>Data Integration (Azure AD, SQL Server, pandas): Merged Azure Active Directory and SQL Server data for comprehensive attendance records.</li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>Excel Automations Project</h3>
+          <p>September 2023 - October 2023</p>
+          <ul>
+            <li>Automated financial analysis by fetching, processing, and analyzing stock prices and currency exchange rates using pandas.</li>
+            <li>Developed email notification systems for vendor contract renewals and employee anniversaries, utilizing Microsoft Graph API, requests, and oauthlib.</li>
+            <li>Implemented tracking and reporting of presentation files (PPT and PPTX) with openpyxl.</li>
+            <li>Created dynamic HTML reports and integrated data from multiple Excel sheets to automate various tasks.</li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>Zoho Call Transcripts Automation System</h3>
+          <p>August 2023 - September 2023</p>
+          <ul>
+            <li>Developed an automation system for fetching, processing, and updating call transcripts from Zoho Creator.</li>
+            <li>File Processing (pdfplumber, docx, Python): Downloaded and extracted text from PDF, DOCX, and TXT files.</li>
+            <li>Concurrent Processing (concurrent.futures): Enhanced efficiency with parallel file downloads and text extraction.</li>
+          </ul>
+        </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact">
+      <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>Email: work.prateekpandey@gmail.com</p>
-        <p>Phone: +91 7355539443</p>
-        <p>Location: Prayagraj, Uttar Pradesh, India</p>
+        <div class="contact__details">
+          <p>Email: <a href="mailto:work.prateekpandey@gmail.com">work.prateekpandey@gmail.com</a></p>
+          <p>Phone: <a href="tel:+917355539443">+91 7355539443</a></p>
+          <p>Location: Prayagraj, Uttar Pradesh, India</p>
+        </div>
         <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/prateek2575/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/prateek2575" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/prateek2575/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+          <li><a href="https://github.com/hi-prateek" target="_blank"><i class='bx bxl-github'></i></a></li>
         </ul>
       </section>
     </main>
 
-    <!-- ============ JAVASCRIPT ===========  -->
     <script src="script.js"></script>
   </body>
 </html>

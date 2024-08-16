@@ -9,6 +9,8 @@
     <title>Prateek Pandey | Portfolio</title>
   </head>
   <body>
+    
+    <!-- ################# Header Section ################## -->
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <a href="#" class="nav__logo">Prateek Pandey</a>
@@ -31,10 +33,12 @@
     </header>
 
     <main class="container">
+      
+      <!-- ################# Hero Section ################## -->
       <section class="hero">
         <div class="hero__content">
           <div class="hero__text">
-            <h1>Hey, I'm <span>Prateek Pandey</span></h1>
+            <h1 id="typewriter-text"></h1>
             <p>
               A passionate <span>Software Developer Engineer</span> from India.
             </p>
@@ -49,6 +53,7 @@
         </div>
       </section>
 
+      <!-- ################# About Section ################## -->
       <section id="about" class="about">
         <h2>About Me</h2>
         <p>
@@ -56,6 +61,7 @@
         </p>
       </section>
 
+      <!-- ################# Skills Section ################## -->
       <section id="skills" class="skills">
         <h2>Skills</h2>
         <div class="skills__container">
@@ -63,17 +69,17 @@
           <span class="skill__box">Flask</span>
           <span class="skill__box">Gen AI</span>
           <span class="skill__box">GIT</span>
+          <span class="skill__box">GraphQL</span>
           <span class="skill__box">XML</span>
           <span class="skill__box">Java</span>
-          <span class="skill__box">HTML</span>
-          <span class="skill__box">CSS</span>
+          <span class="skill__box">HTML5/CSS</span>
+          <span class="skill__box">JavaScript</span>
           <span class="skill__box">C</span>
           <span class="skill__box">SQL</span>
-          <span class="skill__box">JavaScript</span>
-          <span class="skill__box">Microsoft Graph API</span>
         </div>
       </section>
 
+      <!-- ################# Work Experience Section ################## -->
       <section id="work" class="work">
         <h2>Work Experience</h2>
         <div class="work__experience">
@@ -87,6 +93,7 @@
         </div>
       </section>
 
+      <!-- ################# Projects Section ################## -->
       <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project">
@@ -131,18 +138,38 @@
         </div>
       </section>
 
+      <!-- ################# Contact Section ################## -->
       <section id="contact" class="contact">
         <h2>Contact Me</h2>
+        <form id="contact-form" class="contact__form" action="https://formspree.io/f/xkgwzpnj" method="POST">
+          <div class="form__group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="form__group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message"></span>
+          </div>
+          <input type="hidden" name="_subject" value="New message from your portfolio site!">
+          <button type="submit" class="button">Send Message</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
         <div class="contact__details">
-          <p>Email: <a href="mailto:work.prateekpandey@gmail.com">work.prateekpandey@gmail.com</a></p>
-          <p>Phone: <a href="tel:+917355539443">+91 7355539443</a></p>
-          <p>Location: Prayagraj, Uttar Pradesh, India</p>
-        </div>
+          <p><strong>Email:</strong> <a href="mailto:work.prateekpandey@gmail.com">work.prateekpandey@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+917355539443">+91 7355539443</a></p>
+        </div>        
         <ul class="social-links">
           <li><a href="https://www.linkedin.com/in/prateek2575/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
           <li><a href="https://github.com/hi-prateek" target="_blank"><i class='bx bxl-github'></i></a></li>
         </ul>
-      </section>
+      </section>            
     </main>
 
     <script src="script.js"></script>

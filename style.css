@@ -21,6 +21,17 @@ body.dark-theme {
     --light-background: #333;
 }
 
+/* ################# Dark Theme Link Styles ################## */
+body.dark-theme a {
+    color: var(--primary-color); 
+    text-decoration: none;
+}
+
+body.dark-theme a:hover {
+    color: #388e3c; 
+    text-decoration: underline;
+}
+
 /* =========== GENERAL STYLES =========== */
 * {
     padding: 0;
@@ -353,8 +364,8 @@ ul li {
 /* ################# Contact Section ################## */
 .contact__details {
     display: flex;
-    justify-content: center;
-    align-items: center; 
+    justify-content: center; 
+    align-items: center;
     gap: 2rem; 
     margin: 2rem auto 0;
     max-width: 900px;

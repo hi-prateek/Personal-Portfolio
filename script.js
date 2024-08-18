@@ -47,9 +47,29 @@ themeButton.addEventListener('click', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const targetId = this.getAttribute('href');
+
+    if (targetId === "#") {
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// ################# Specific Event Listener for "Prateek Pandey" ##################
+
+document.querySelector('.nav__logo').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 });
 

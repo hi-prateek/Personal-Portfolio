@@ -2,12 +2,12 @@
 
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+      nav = document.getElementById(navId);
 
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('show-menu');
-    });
+      toggle.addEventListener('click', () => {
+          nav.classList.toggle('show-menu');
+      });
   }
 };
 showMenu('nav-toggle', 'nav-menu');
@@ -28,10 +28,10 @@ const getCurrentIcon = () =>
 
 if (selectedTheme) {
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
-    darkTheme
+      darkTheme
   );
   themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](
-    iconTheme
+      iconTheme
   );
 }
 
@@ -46,20 +46,19 @@ themeButton.addEventListener('click', () => {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href');
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
 
-    if (targetId === "#") {
-      // Scroll to the top of the page
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-      document.querySelector(targetId).scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+      if (targetId === "#") {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      } else {
+          document.querySelector(targetId).scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
   });
 });
 
@@ -68,8 +67,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector('.nav__logo').addEventListener('click', function (e) {
   e.preventDefault();
   window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+      top: 0,
+      behavior: 'smooth'
   });
 });
 
@@ -77,11 +76,11 @@ document.querySelector('.nav__logo').addEventListener('click', function (e) {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate-active');
-    } else {
-      entry.target.classList.remove('animate-active');
-    }
+      if (entry.isIntersecting) {
+          entry.target.classList.add('animate-active');
+      } else {
+          entry.target.classList.remove('animate-active');
+      }
   });
 });
 
@@ -96,11 +95,11 @@ const typewriter = (text, elementId, delay = 100) => {
   const element = document.getElementById(elementId);
   let index = 0;
   const type = () => {
-    if (index < text.length) {
-      element.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(type, delay);
-    }
+      if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, delay);
+      }
   };
   type();
 };
@@ -113,32 +112,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  
+
   const form = e.target;
   const formData = new FormData(form);
   const statusMessage = document.getElementById('form-status');
-  
+
   fetch('https://formspree.io/f/xkgwzpnj', {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
+      method: 'POST',
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
   }).then(response => {
-    if (response.ok) {
-      statusMessage.textContent = 'Your message has been sent!';
-      statusMessage.style.display = 'block';
-      form.reset();
-    } else {
+      if (response.ok) {
+          statusMessage.textContent = 'Your message has been sent!';
+          statusMessage.style.display = 'block';
+          form.reset();
+      } else {
+          statusMessage.textContent = 'Oops! There was a problem with your submission. Please try again.';
+          statusMessage.style.display = 'block';
+      }
+  }).catch(error => {
       statusMessage.textContent = 'Oops! There was a problem with your submission. Please try again.';
       statusMessage.style.display = 'block';
-    }
-  }).catch(error => {
-    statusMessage.textContent = 'Oops! There was a problem with your submission. Please try again.';
-    statusMessage.style.display = 'block';
   });
 
   setTimeout(() => {
-    statusMessage.style.display = 'none';
+      statusMessage.style.display = 'none';
   }, 5000);
+});
+
+// ################# Modal Open/Close Functions ##################
+
+function openModal(modalId) {
+  console.log("Attempting to open modal: " + modalId);
+  const modal = document.getElementById(modalId);
+  if (modal) {
+      console.log("Modal found. Displaying modal: " + modalId);
+      modal.classList.add('show'); 
+  } else {
+      console.error("Modal not found: " + modalId);
+  }
+}
+
+function closeModal(modalId) {
+  console.log("Attempting to close modal: " + modalId);
+  const modal = document.getElementById(modalId);
+  if (modal) {
+      console.log("Modal found. Hiding modal: " + modalId);
+      modal.classList.remove('show');
+  } else {
+      console.error("Modal not found: " + modalId);
+  }
+}
+
+window.onclick = function(event) {
+  const modals = document.getElementsByClassName('modal');
+  for (let i = 0; i < modals.length; i++) {
+      if (event.target == modals[i]) {
+          console.log("Click outside detected. Closing modal: " + modals[i].id);
+          modals[i].classList.remove('show');
+      }
+  }
+};
+
+// ################# Scroll to Top on Page Refresh ##################
+
+window.addEventListener('beforeunload', function () {
+  window.scrollTo(0, 0);
 });

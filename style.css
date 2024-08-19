@@ -81,32 +81,32 @@ body {
 }
 
 .modal.show {
-    display: flex; /* Show the modal */
+    display: flex; 
 }
 
 .modal-content ul {
     padding-left: 20px;
-    list-style: none; /* Remove default bullets */
+    list-style: none; 
     margin-top: 1rem;
 }
 
 .modal-content ul li {
     position: relative;
     margin-bottom: 15px;
-    padding-left: 30px; /* Add space for the custom bullet */
+    padding-left: 30px;
     font-size: 1rem;
     color: var(--main-color);
     line-height: 1.6;
 }
 
 .modal-content ul li::before {
-    content: '\2022'; /* Unicode for bullet point */
+    content: '\2022'; 
     position: absolute;
     left: 0;
     top: 0.25em;
-    color: var(--primary-color); /* Custom bullet color (green) */
-    font-size: 1.2rem; /* Bullet size */
-    line-height: 1; /* Align bullet vertically */
+    color: var(--primary-color); 
+    font-size: 1.2rem; 
+    line-height: 1;
 }
 
 .close {
@@ -134,7 +134,7 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     color: #fff;
-    background-color: var(--primary-color); /* Green color */
+    background-color: var(--primary-color);
     border-radius: 12px;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -449,17 +449,17 @@ ul li {
 }
 
 .project__card:hover {
-    background-color: var(--primary-color); /* Green color on hover */
-    transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a more pronounced effect */
+    background-color: var(--primary-color);
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .project__card:hover h3 {
-    color: #fff; /* Change text color to white on hover */
+    color: #fff;
 }
 
 .project__card:hover p {
-    color: #f0f0f0; /* Lighten any additional text color on hover */
+    color: #f0f0f0; 
 }
 
 .project__details {
